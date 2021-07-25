@@ -1,6 +1,6 @@
-[![GitHub Actions Build](https://github.com/mesh-for-data/mover/actions/workflows/build.yml/badge.svg)](https://github.com/mesh-for-data/mover/actions/workflows/build.yml)
+[![GitHub Actions Build](https://github.com/fybrik/mover/actions/workflows/build.yml/badge.svg)](https://github.com/fybrik/mover/actions/workflows/build.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![codecov](https://codecov.io/gh/mesh-for-data/mover/branch/master/graph/badge.svg)](https://codecov.io/gh/mesh-for-data/mover)
+[![codecov](https://codecov.io/gh/fybrik/mover/branch/master/graph/badge.svg)](https://codecov.io/gh/fybrik/mover)
 
 
 # Mover
@@ -8,7 +8,7 @@
 This is a  collection of data movement capabilities intended
 as a building block that can  be integrated into a  variety of different
 control        planes.          They        are         used        in
-[mesh-for-data](https://github.com/mesh-for-data/mesh-for-data), but can
+[fybrik](https://github.com/fybrik/fybrik), but can
 be run as a stand-alone service.
 
 The  mover copies  data  between any two supported data stores, for example S3 and Kafka,  and
@@ -23,12 +23,12 @@ The CI pipeline of the mover builds an updated image as new pull
 requests are merged and on a schedule so that security
 updates of the base image are applied.
 
-The latest image can be found at: `ghcr.io/mesh-for-data/mover:latest`
+The latest image can be found at: `ghcr.io/fybrik/mover:latest`
 
-### Setting up a minimal movement only mesh-for-data version
+### Setting up a minimal movement only fybrik version
 
 In order to test the mover image on a K8s cluster there is no need for
-a complete installation of [mesh-for-data](https://github.com/mesh-for-data/mesh-for-data).
+a complete installation of [fybrik](https://github.com/fybrik/fybrik).
 A cut-down version that only supports the movement components can be
 installed using the [movement_controller.yaml](testing/movement_controller.yaml) file.
 
@@ -36,9 +36,9 @@ This deployment will install a control component and the CRDs that allow the exe
 of data movements. In order to install the yaml please follow these steps:
 
 1. Make sure the cert-manager operator is installed. Either by installing via OpenShift UI or manually via `kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v0.13.1/cert-manager.yaml`
-2. Create a namespace: `kubectl create ns mesh-for-data`
+2. Create a namespace: `kubectl create ns fybrik`
 3. Run the install YAML file: `kubectl apply -f movement_controller.yaml`
-4. When the BatchTransfers are not created in the `mesh-for-data` namespace please install the event creator role in that namespace: `kubectl apply -f EventCreatorRole.yaml` (please adapt namespace in file)
+4. When the BatchTransfers are not created in the `fybrik` namespace please install the event creator role in that namespace: `kubectl apply -f EventCreatorRole.yaml` (please adapt namespace in file)
 5. Run some example BatchTransfers (please adapt template): `kubectl apply -f batchtransfer.yaml`
 
 If you want to test with your own image make sure to update either the environment variable `MOVER_IMAGE` in the controller deployment or the `spec.image` in the BatchTransfer definition.
@@ -83,13 +83,13 @@ Spark 2.4 base
 ```
 docker build -t spark-base:2.4.8 -f src/main/docker/spark/spark2.Dockerfile src/main/docker/spark
 mvn package jib:dockerBuild -DskipTests -Plocal-registry -Pspark2
-docker push localhost:5000/mesh-for-data/mover:latest
+docker push localhost:5000/fybrik/mover:latest
 ```
 Spark 3.0 base
 ```
 docker build -t spark-base:3.0.2 -f src/main/docker/spark/spark3.Dockerfile src/main/docker/spark
 mvn package jib:dockerBuild -DskipTests -Plocal-registry -Pspark3
-docker push localhost:5000/mesh-for-data/mover:latest-spark3
+docker push localhost:5000/fybrik/mover:latest-spark3
 ```
 
 ### Testing with Kafka
@@ -104,7 +104,7 @@ An entry has to be added to your local /etc/hosts file so that `kafka0` maps to 
 
 ### Running images
 
-The BatchTransfer spec.image parameter has to be set to `localhost:5000/mesh-for-data/mover:latest`.
+The BatchTransfer spec.image parameter has to be set to `localhost:5000/fybrik/mover:latest`.
 
 ## Local testing with _minikube_
 ### Setting up the registry with _minikube_
@@ -170,7 +170,7 @@ The BatchTransfer spec.image parameter has to be set to `image-registry.openshif
 
 Alternatively if you want to specify a default image for all BatchTransfers and StreamTransfers please change the `MOVER_IMAGE`
 environment variable in the deployment of the controller.
-```kubectl -n mesh-for-data edit deployment m4d-controller-manager```
+```kubectl -n fybrik edit deployment m4d-controller-manager```
 
 ## Running locally in the IDE
 
