@@ -10,9 +10,9 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.datastore.cos
+package io.fybrik.mover.datastore.cos
 
-import com.ibm.m4d.mover.WriteOperation
+import io.fybrik.mover.WriteOperation
 import org.apache.spark.sql.{DataFrame, DataFrameWriter, Row, SaveMode, SparkSession}
 import org.apache.spark.sql.streaming.{DataStreamWriter, OutputMode}
 

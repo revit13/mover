@@ -10,10 +10,10 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.transformation
+package io.fybrik.mover.transformation
 
-import com.ibm.m4d.mover.datastore.kafka.KafkaUtils
-import com.ibm.m4d.mover.spark.{SparkTest, _}
+import io.fybrik.mover.datastore.kafka.KafkaUtils
+import io.fybrik.mover.spark.{SparkTest, _}
 import com.typesafe.config.{ConfigFactory, ConfigValueFactory}
 import org.apache.commons.codec.digest.DigestUtils
 import org.scalatest.flatspec.AnyFlatSpec
@@ -239,7 +239,7 @@ class TransformationSuite extends AnyFlatSpec with Matchers with SparkTest {
           |{
           |  name = "noop"
           |  action = "class"
-          |  class = "com.ibm.m4d.mover.transformation.NoopTransformation"
+          |  class = "io.fybrik.mover.transformation.NoopTransformation"
           |  options.a = "true"
           |  columns = ["s"]
           |}
@@ -275,7 +275,7 @@ class TransformationSuite extends AnyFlatSpec with Matchers with SparkTest {
           |{
           |  name = "noop"
           |  action = "class"
-          |  class = "com.ibm.m4d.mover.transformation.NoopTransformation"
+          |  class = "io.fybrik.mover.transformation.NoopTransformation"
           |  options.a = "true"
           |  columns = ["s"]
           |}

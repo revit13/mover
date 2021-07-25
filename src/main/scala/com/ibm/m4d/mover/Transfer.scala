@@ -10,12 +10,12 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover
+package io.fybrik.mover
 
-import com.ibm.m4d.mover.conf.CredentialSubstitutor
-import com.ibm.m4d.mover.datastore.{DataStore, DataStoreBuilder}
-import com.ibm.m4d.mover.spark.{SnapshotAggregator, SparkConfig, SparkOutputCounter, SparkUtils}
-import com.ibm.m4d.mover.transformation.Transformation
+import io.fybrik.mover.conf.CredentialSubstitutor
+import io.fybrik.mover.datastore.{DataStore, DataStoreBuilder}
+import io.fybrik.mover.spark.{SnapshotAggregator, SparkConfig, SparkOutputCounter, SparkUtils}
+import io.fybrik.mover.transformation.Transformation
 import com.typesafe.config.ConfigFactory
 import io.fabric8.kubernetes.client.{DefaultKubernetesClient, KubernetesClientException}
 import org.apache.commons.io.FileUtils

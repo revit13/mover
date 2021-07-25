@@ -10,10 +10,10 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.datastore
+package io.fybrik.mover.datastore
 
-import com.ibm.m4d.mover.datastore.cos.COSBuilder
-import com.ibm.m4d.mover.datastore.kafka.KafkaBuilder
+import io.fybrik.mover.datastore.cos.COSBuilder
+import io.fybrik.mover.datastore.kafka.KafkaBuilder
 import com.typesafe.config.Config
 
 import scala.collection.mutable

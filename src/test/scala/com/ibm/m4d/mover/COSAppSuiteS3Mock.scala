@@ -1,4 +1,4 @@
-package com.ibm.m4d.mover
+package io.fybrik.mover
 
 /**
   * (C) Copyright IBM Corporation 2020.
@@ -16,9 +16,9 @@ import com.dimafeng.testcontainers.{ForAllTestContainer, GenericContainer}
 import com.ibm.cloud.objectstorage.auth.{AWSStaticCredentialsProvider, BasicAWSCredentials}
 import com.ibm.cloud.objectstorage.client.builder.AwsClientBuilder.EndpointConfiguration
 import com.ibm.cloud.objectstorage.services.s3.AmazonS3ClientBuilder
-import com.ibm.m4d.mover.datastore.cos.{COS, COSBuilder}
-import com.ibm.m4d.mover.spark.{COSTargetServiceName, SparkTest, cosUrl}
-import com.ibm.m4d.mover.transformation.MyClass
+import io.fybrik.mover.datastore.cos.{COS, COSBuilder}
+import io.fybrik.mover.spark.{COSTargetServiceName, SparkTest, cosUrl}
+import io.fybrik.mover.transformation.MyClass
 import com.typesafe.config.{ConfigFactory, ConfigRenderOptions}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers

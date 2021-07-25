@@ -10,11 +10,11 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.spark
+package io.fybrik.mover.spark
 
 import java.util.TimeZone
 
-import com.ibm.m4d.mover.datastore.cos.COS
+import io.fybrik.mover.datastore.cos.COS
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
 

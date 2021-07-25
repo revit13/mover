@@ -10,7 +10,7 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.datastore.cos
+package io.fybrik.mover.datastore.cos
 
 import com.ibm.cloud.objectstorage.ClientConfiguration
 import com.ibm.cloud.objectstorage.auth.{AWSStaticCredentialsProvider, BasicAWSCredentials}
@@ -18,9 +18,9 @@ import com.ibm.cloud.objectstorage.client.builder.AwsClientBuilder.EndpointConfi
 import com.ibm.cloud.objectstorage.oauth.BasicIBMOAuthCredentials
 import com.ibm.cloud.objectstorage.services.s3.model.S3ObjectSummary
 import com.ibm.cloud.objectstorage.services.s3.{AmazonS3, AmazonS3ClientBuilder}
-import com.ibm.m4d.mover.datastore.{DataStore, InputType}
-import com.ibm.m4d.mover.spark.{COSTargetServiceName, cosUrl}
-import com.ibm.m4d.mover.{DataFlowType, DataType, MetaData, WriteOperation}
+import io.fybrik.mover.datastore.{DataStore, InputType}
+import io.fybrik.mover.spark.{COSTargetServiceName, cosUrl}
+import io.fybrik.mover.{DataFlowType, DataType, MetaData, WriteOperation}
 import org.apache.spark.sql.streaming.DataStreamWriter
 import org.apache.spark.sql.{DataFrame, Row, SparkSession}
 import org.slf4j.LoggerFactory

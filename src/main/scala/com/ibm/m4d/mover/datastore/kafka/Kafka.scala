@@ -10,12 +10,12 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.datastore.kafka
+package io.fybrik.mover.datastore.kafka
 
 import java.util.Properties
 
-import com.ibm.m4d.mover.datastore.{DataStore, InputType}
-import com.ibm.m4d.mover.{DataFlowType, DataType, MetaData, WriteOperation}
+import io.fybrik.mover.datastore.{DataStore, InputType}
+import io.fybrik.mover.{DataFlowType, DataType, MetaData, WriteOperation}
 import io.confluent.kafka.serializers.{AbstractKafkaAvroSerDeConfig, KafkaAvroDeserializer, KafkaAvroDeserializerConfig, KafkaAvroSerializer}
 import org.apache.kafka.clients.CommonClientConfigs
 import org.apache.kafka.clients.consumer.ConsumerConfig

@@ -10,9 +10,9 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.transformation
+package io.fybrik.mover.transformation
 
-import com.ibm.m4d.mover.spark.SparkTest
+import io.fybrik.mover.spark.SparkTest
 import com.typesafe.config.{ConfigFactory, ConfigValueFactory}
 import org.apache.commons.codec.digest.DigestUtils
 import org.scalatest.flatspec.AnyFlatSpec

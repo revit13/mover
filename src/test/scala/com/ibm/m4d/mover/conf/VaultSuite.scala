@@ -10,7 +10,7 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.conf
+package io.fybrik.mover.conf
 
 import com.google.gson.JsonParser
 import com.typesafe.config.{Config, ConfigFactory, ConfigValueFactory}
@@ -23,7 +23,7 @@ import java.io.FileNotFoundException
 import scala.collection.JavaConverters._
 
 /**
-  * Unit test for the [[VaultClient]] and the [[com.ibm.m4d.mover.conf.VaultSecretSubstitutor]].
+  * Unit test for the [[VaultClient]] and the [[io.fybrik.mover.conf.VaultSecretSubstitutor]].
   */
 class VaultSuite extends AnyFlatSpec with Matchers {
   val FakeLogin = "{\"auth\": {\"client_token\":\"mytoken\"}}"

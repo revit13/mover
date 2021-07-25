@@ -10,7 +10,7 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.transformation
+package io.fybrik.mover.transformation
 
 import com.typesafe.config.Config
 import org.apache.spark.sql.DataFrame
@@ -25,7 +25,7 @@ class RemoveColumnTransformation(val name: String, val columns: Seq[String], val
   override def additionalSparkConfig(): Map[String, String] = Map.empty[String, String]
 
   private def removeColumn(df: DataFrame, struct: Option[String]): DataFrame = {
-    import com.ibm.m4d.mover.spark._
+    import io.fybrik.mover.spark._
     val columnsSet = struct match {
       case Some(struct) => df.schema.fieldAsStructType(struct).fieldNames.toSet
       case None         => df.schema.fieldNames.toSet

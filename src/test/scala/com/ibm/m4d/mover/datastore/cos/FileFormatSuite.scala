@@ -10,11 +10,11 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.datastore.cos
+package io.fybrik.mover.datastore.cos
 
-import com.ibm.m4d.mover.WriteOperation
-import com.ibm.m4d.mover.spark.SparkTest
-import com.ibm.m4d.mover.transformation.MyClass
+import io.fybrik.mover.WriteOperation
+import io.fybrik.mover.spark.SparkTest
+import io.fybrik.mover.transformation.MyClass
 import org.apache.commons.io.FileUtils
 import org.apache.spark.sql.streaming.Trigger
 import org.apache.spark.sql.types.{IntegerType, StringType}

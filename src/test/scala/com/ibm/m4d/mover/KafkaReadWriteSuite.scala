@@ -10,12 +10,12 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover
+package io.fybrik.mover
 
-import com.ibm.m4d.mover.datastore.Source
-import com.ibm.m4d.mover.datastore.kafka.SerializationFormat.Avro
-import com.ibm.m4d.mover.datastore.kafka.{Kafka, KafkaUtils}
-import com.ibm.m4d.mover.spark.{SparkTest, _}
+import io.fybrik.mover.datastore.Source
+import io.fybrik.mover.datastore.kafka.SerializationFormat.Avro
+import io.fybrik.mover.datastore.kafka.{Kafka, KafkaUtils}
+import io.fybrik.mover.spark.{SparkTest, _}
 import org.scalatest.matchers.should.Matchers
 
 /**

@@ -10,10 +10,10 @@
   * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
   * specific language governing permissions and limitations under the License.
   */
-package com.ibm.m4d.mover.datastore.local
+package io.fybrik.mover.datastore.local
 
-import com.ibm.m4d.mover.datastore.cos.FileFormat
-import com.ibm.m4d.mover.datastore.{DataStore, DataStoreBuilder, Source}
+import io.fybrik.mover.datastore.cos.FileFormat
+import io.fybrik.mover.datastore.{DataStore, DataStoreBuilder, Source}
 import com.typesafe.config.Config
 
 import scala.collection.JavaConverters._
